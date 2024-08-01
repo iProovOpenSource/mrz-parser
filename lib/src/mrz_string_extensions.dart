@@ -31,7 +31,8 @@ extension _MRZStringExtensions on String {
       .replaceAll('D', '0')
       .replaceAll('I', '1')
       .replaceAll('Z', '2')
-      .replaceAll('B', '8');
+      .replaceAll('B', '8')
+      .replaceAll('S', '5');
 
   String replaceAngleBracketsWithSpaces() => replaceAll('<', ' ');
 }
