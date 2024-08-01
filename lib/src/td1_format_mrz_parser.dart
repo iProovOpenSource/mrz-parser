@@ -67,7 +67,10 @@ class _TD1MRZFormatParser {
         MRZFieldRecognitionDefectsFixer.fixDocumentType(documentTypeRaw);
     final countryCodeFixed =
         MRZFieldRecognitionDefectsFixer.fixCountryCode(countryCodeRaw);
-    final documentNumberFixed = documentNumberRaw;
+
+    final String documentNumberFixed =
+        MRZFieldRecognitionDefectsFixer.fixDocumentNumber(
+            documentNumberRaw, documentTypeFixed, countryCodeFixed);
 
     final documentNumberCheckDigitFixed =
         MRZFieldRecognitionDefectsFixer.fixCheckDigit(

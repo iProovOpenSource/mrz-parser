@@ -22,4 +22,17 @@ class MRZFieldRecognitionDefectsFixer {
 
   static String fixNationality(String input) =>
       input.replaceSimilarDigitsWithLetters();
+
+  static String fixDocumentNumber(
+    String input,
+    String DocumentTypeCode,
+    String CountryCode,
+  ) {
+    if (DocumentTypeCode == "ID") {
+      if (["BEL", "UKR"].contains(CountryCode)) {
+        return input.replaceSimilarLettersWithDigits();
+      }
+    }
+    return input;
+  }
 }
