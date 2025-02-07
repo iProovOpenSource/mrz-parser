@@ -2,7 +2,7 @@ name: mrz_parser
 description: Parse MRZ (Machine Readable Zone) from identity documents.
 version: 2.0.1
 homepage: https://github.com/iproovopensource/mrz_parser
-publish: none
+publish_to: none
 
 environment:
   sdk: ">=2.12.0 <4.0.0"
